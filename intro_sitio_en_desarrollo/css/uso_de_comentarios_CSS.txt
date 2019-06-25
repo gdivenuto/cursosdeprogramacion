@@ -1,0 +1,23 @@
+Los comentarios en CSS se definen de la siguiente manera:
+
+     /* esto es una linea comentada */
+     
+     /* esto comenta una regla CSS con saltos de línea y tabulación
+     p {
+         color: green;
+         font-size: 18px;
+         text-align: center;
+     }
+     */
+
+     /* Con el ejemplo de abajo verán que si agregan una / después del segundo asterisco (*) 
+     en la primer línea (la 21 en este ejemplo)
+     podrán descomentar el bloque respectivo.
+     MUY útil para ir probando propiedades mientras se va trabajando. */
+
+     /**
+     html {
+        margin: 0;
+        padding: 0;
+     }
+     /**/

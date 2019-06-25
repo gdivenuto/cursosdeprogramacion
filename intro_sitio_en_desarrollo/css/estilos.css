@@ -1,0 +1,142 @@
+/*
+ Noten que en la Hoja de Estilos NO deben utilizarse etiquetas ni sintáxis HTML
+
+ Los comentarios en CSS se definen de la siguiente manera:
+
+	 /* esto es una linea comentada */
+	 
+	 /* esto comenta una regla CSS con saltos de línea y tabulación
+	 p {
+		 color: green;
+		 font-size: 18px;
+		 text-align: center;
+	 }
+	 */
+
+	 /* Con el ejemplo de abajo verán que si agregan una / después del segundo asterisco (*) 
+	 en la primer línea (la 21 en este ejemplo) podrán descomentar el bloque respectivo.
+
+	 MUY útil para ir probando propiedades mientras se va trabajando. */
+
+	 /**
+	 html {
+		margin: 0;
+		padding: 0;
+	 }
+	 /**/
+
+/* Lean los comentarios para entender el uso de cada propiedad CSS !!!!!!
+
+   Vayan probando las propiedades comentadas también.
+******************************************************************************/
+
+/* Se aplican las reglas CSS al cuerpo del documento HTML (etiqueta 'body') */
+body {
+	/* Ubicación de la imagen, es decir, ruta donde se encuentra el archivo físico de la imagen,
+	aquí se utilizan los ../ porque la imagen se encuentra fuera del directorio css/ */
+	background-image: url("../imagenes/fondo.jpg");
+	/* Para dejar la imagen de fondo centrada, tanto vertical como horizontalmente */
+	background-position: center;
+	/* Para que la imagen de fondo no se repita */
+	background-repeat: no-repeat;
+	/* La imagen se fija en la ventana de visualización (del navegador) para que la altura de la imagen no supere a la del contenido */
+	background-attachment: fixed;
+	/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+	background-size: cover;
+	/* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si surgen problemas para cargarla */
+	background-color: #66999;
+}
+/* Se aplican las reglas CSS al contenedor definido con la etiqueta 'section' en el HTML */
+section {
+	/* Se define el ancho del elemento contenedor */
+	width: 270px;
+
+	/* A dicho contenedor se le definen algunas esquinas redondeadas,
+	sólo la esquina superior derecha y la esquina inferior izquierda */
+	border-top-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+
+	/* Se define la sombra al elemento contenedor (la caja definida) */
+	box-shadow: 30px 10px 20px #aaa;
+	/* Otra forma de definir el color pero en sistema decimal *
+	box-shadow: 30px 10px 20px rgba(255,0,0,0.5);
+	/* para definir una sombra interna *
+	box-shadow: inset 0px 0px 40px #aaa;
+	/**/
+
+	transform: rotate(-7deg);
+	/* transform-origin: left top; */
+	/* transform: scale(1.20 ,-1); */
+	/* transform: skew(5deg, 5deg); */
+	/* transform: rotate(15deg) scale(0.9,0.6) translate(10px,10px) skew(5deg,0deg); */
+	
+	/* 
+	Aquí se podía definir el color de fondo en negro
+	con una opacidad de .6
+	NO conviene utilizarlo así porque al definir la opacidad al color del fondo 
+	por separado hace que el texto quede opacado también.
+
+	Pueden probarlo descomentando como explico arriba, agregando y quitando la / en el lugar respectivo.
+	*/
+
+	/**
+	background-color: #000;
+	opacity: .6;
+	/**/
+	/* Para que el texto se visualice sin la opacidad,
+	se establece el color de fondo con la opacidad mediante el sistema RGBA, 
+	donde el parámetro correspondiente a la letra "A" define el grado de opacidad, entre 0 y 1 */
+	background-color: rgba(0, 0, 0, 0.3);
+	/**/
+
+	/* Espacio externo del contenedor (definido con la etiqueta section) 
+	y su elemento padre (la ventana del navegador en este caso) */
+	margin: 7% auto;
+	/* Espacio interno con respecto a los elementos que contiene, 
+	en este caso los encabezados h1, h3 y el enlace (definido con la etiqueta 'a') */
+	padding: 5%;
+
+	/* Nombre de la fuente utilizada para el texto */
+	font-family: Arial;
+	/* Color del texto */
+	color: #fff;
+	/* Alineación del texto */
+	text-align: center;
+}
+h3 {
+	/* Grosor de la letra */
+	font-weight: bold;
+	/* Espaciado entre las letras */
+	letter-spacing: 2px;
+}
+h1 {
+	letter-spacing: 1px;
+	color: orange;
+	/* Sombra aplicado al texto 
+	text-shadow: 5px 5px 5px #aaa;*/
+
+}
+/* Se aplican las reglas CSS a todos los enlaces 'a', que se encuentran dentro del contenedor 'section' */
+section a {
+	font-weight: bold;
+	/* Con el valor 'none', el enlace no se visualizará subrayado */
+	text-decoration: none;
+	color: #4caf50;
+}
+/* Este estilo se aplica cuando nos posicionamos con el mouse sobre el enlace 'a' */
+section a:hover {
+	color: orange;
+}
+
+/* Se aplica el siguiente estilo para dispositivos con un ancho NO mayor a 767px,
+es decir, aquellos resoluciones menores a 767px.
+Esta mediaquery es utilizada para dispositivos Móviles */
+@media only screen and (max-width: 767px) {
+	/* Aquí se reduce el tamaño de la fuente de los encabezados h3 y h1 respectivamente.*/
+	h3 {
+		font-size: 14px;
+	}
+	h1 {
+		font-size: 12px;
+	}
+}
