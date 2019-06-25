@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo Video HTML5</title>
+		<style type="text/css">
+			section {
+				width: 50%;   /* Ancho de la mitad del navegador */
+				margin: auto; /* Centrado */
+			}
+			h3 {
+				font-family: Arial;
+				font-size: 13px;
+				color: #fff;
+				background-color: #04b3ff;
+				border-left: 5px solid #065fd4;
+				padding: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<!-- Por ejemplo si poseen un video en formato MP4 en el directorio videos/-->
+			<!-- <video width="500" 
+					height="250" 
+					src="videos/soda_stereo_profugos.mp4" 
+					controls 
+					autoplay >
+				Tu navegador no admite el elemento <code>video</code>.
+			</video>
+			-->
+			<video width="640" 
+					height="360"
+					src="http://videos.mozilla.org/firefox/3.5/overview/overview.ogv"
+					controls 
+					autoplay="autoplay" >
+					Tu navegador no admite el elemento <code>video</code>.
+			</video>
+			<h3>Nota: el valor autoplay se encuentra deshabilitado por defecto en los navegadores.</h3>
+		</section>
+	</body>
+</html>
