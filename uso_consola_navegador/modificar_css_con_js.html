@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Modificaci&oacute;n de CSS desde JS</title>
+		
+		<style type="text/css">
+			body {
+				color: orange;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Ejemplo de modificaci&oacute;n de CSS desde JS</p>
+
+		<a href="javascript:modificarCSS();">Insertar regla CSS</a>
+		<br><br>
+		<a href="javascript:limpiarCSS();">Limpiar CSS</a>
+		
+		<script>
+			function modificarCSS() {
+				var estilo = document.createElement('style');
+
+				var nuevo_css = 'h2{font-size:36px;color:blue;}body{color:green;font-size:20px;}';
+
+				estilo.type = 'text/css';
+				
+				estilo.appendChild(document.createTextNode(nuevo_css));
+				
+				document.body.appendChild(estilo);
+			}
+
+			function limpiarCSS() {
+				window.location.reload();
+			}
+		</script>
+	</body>
+</html>

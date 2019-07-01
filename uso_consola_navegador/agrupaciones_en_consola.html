@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Agrupaciones en Consola</title>
+    </head>
+    <body>
+        <p>Agrupaciones en Consola</p>
+
+        <script type="text/javascript">
+            
+            console.group("Inicio ciclo");
+            for (var i=0; i < 5; i++) 
+                console.log("Iteración nro. %i", i);
+            console.groupEnd();
+
+            console.groupCollapsed("Inicio otro ciclo");
+            for (var i=0; i < 5; i++) 
+                console.log("Iteración nro. %i", i);
+            console.groupEnd();
+        </script>
+    </body>
+</html>
