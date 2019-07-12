@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Operaciones en JS</title>
+        <meta charset="utf-8">
+        <script src="js/calculador.js"></script>
+        <script src="js/procesar.js"></script>
+    </head>
+    <body>
+        <form>
+            Nro 1: <input id="num1" type="number" />
+            &nbsp;
+            Nro 2: <input id="num2" type="number" />
+            &nbsp;
+            Resultado: <span id="resultado"></span>
+            <br><br>
+            <input type="button" value="+" onclick="calcular('sumar'); return false;" />
+            &nbsp;
+            <input type="button" value="-" onclick="calcular('restar'); return false;" />
+            &nbsp;
+            <input type="button" value="*" onclick="calcular('multiplicar'); return false;" />
+            &nbsp;
+            <input type="button" value="/" onclick="calcular('dividir'); return false;" />
+        </form>
+    </body>
+</html>
