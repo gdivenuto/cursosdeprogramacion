@@ -1,0 +1,76 @@
+{
+    "nombre_grupo": "Grupo días Sábado",
+    "ciudad": "Mar del Plata",
+    "anio_inicio": 2019,
+    "sede": "Técnica Nro 2",
+    "activo": true,
+    "miembros": [
+        {
+            "nombre": "Marcos Sanchez",
+            "edad": 19,
+            "apodo": "Marquitos",
+            "capacitaciones": [
+              "Idioma Inglés",
+              "Scratch v.3",
+              "Electrónica Aplicada",
+              "Arduino"
+            ]
+        },
+        {
+            "nombre": "Patricia Sosa",
+            "edad": 17,
+            "apodo": "Pato",
+            "capacitaciones": [
+              "Idioma Portugués",
+              "Electrónica Digital",
+              "Lenguaje Python",
+              "Diseño Gráfico"
+            ]
+        },
+        {
+            "nombre": "Esteban Lorte",
+            "edad": 18,
+            "apodo": "Lolo",
+            "capacitaciones": [
+              "Idioma Inglés",
+              "Lenguaje PHP",
+              "Lenguaje HTML",
+              "Electrónica Digital",
+              "Arduino"
+            ]
+        },
+        {
+            "nombre": "Laura Torres",
+            "edad": 18,
+            "apodo": "Moto",
+            "capacitaciones": [
+              "Idioma Inglés",
+              "Electrónica Aplicada",
+              "Lenguaje C++",
+              "Redes"
+            ]
+        },
+        {
+            "nombre": "Mariano Tevez",
+            "edad": 19,
+            "apodo": "Apache",
+            "capacitaciones": [
+              "Idioma Inglés",
+              "Lenguaje PHP",
+              "Motor DB MySQL",
+              "Lenguaje C#"
+            ]
+        },
+        {
+            "nombre": "Pablo Perez",
+            "edad": 18,
+            "apodo": "Pepo",
+            "capacitaciones": [
+              "Idioma Inglés",
+              "Lenguaje C++",
+              "Electrónica Digital",
+              "Electrónica Aplicada"
+            ]
+        }
+    ]
+}

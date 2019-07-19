@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JSON en JS</title>
+        <script src="js/usando_json.js"></script>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <header></header>
+
+        <section></section>
+        
+        <script>
+            // Para obtener el JSON, se utiliza un API llamada XMLHttpRequest (a menudo llamado XHR)
+            // ----------------------------------------------------------------------------------------
+
+            // Se asigna la referencia de los elementos header y section del HTML
+            var header = document.querySelector('header');
+            var section = document.querySelector('section');
+            
+            // Se almacena la URL del JSON que se quiere recuperar
+            var requestURL = './info.json';
+            
+            // Se crea una solicitud XMLHttpRequest
+            var request = new XMLHttpRequest();
+            
+            // Se abre una nueva solicitud
+            // 1er parámetro: GET, el método HTTP a usar cuando se hace la solicitud en la red
+            // 2do parámetro: la URL a la que se realiza la solicitud
+            request.open('GET', requestURL);
+
+            // Se define el tipo de respuesta 'responseType' en JSON
+            // de esta forma esa solicitud XHR sabe que el servidor estará retornando un JSON, 
+            // y que esto debería ser convertido en segundo plano en un objeto JavaScript
+            request.responseType = 'json';
+            // Se envía la solicitud
+            request.send();
+
+            request.onload = function() {
+                // Se almacena la respuesta en una variable
+                // dicha variable contiene el objeto JavaScript basado en el JSON
+                var miembros_grupo = request.response;
+
+                // Se pasa el objeto JS para llenar el elemento 'header' HTML
+                cargarHeader(miembros_grupo);
+                
+                // Se pasa el objeto JS para mostrar la información de cada miembro del grupo
+                // en el elemento 'section' HTML  
+                mostrarMiembros(miembros_grupo);
+            }
+        </script>
+    </body>
+</html>
